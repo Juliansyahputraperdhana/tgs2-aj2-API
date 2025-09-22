@@ -104,4 +104,8 @@ app.post('/generate-from-audio', upload.single('audio'), async (req, res) => {
     } finally {
         fs.unlinkSync(req.file.path);
     }
-}); 
+});
+
+app.get('/', (req, res) => {
+    res.send('Hello, I\'m Juliansyah Putra Perdhana');
+});
